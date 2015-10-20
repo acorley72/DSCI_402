@@ -1,0 +1,115 @@
+_.reverse() or _[::-1]
+_.sort() or sorted(_)
+** square root
+b = a <- makes them be the same thing 
+b = list(a)
+"abc" + "def" 
+"ab'c'" + "def"
+a[1:4] <- gives range 
+_.upper() <- converts string of character to all upper case 
+_.lower() <- converts string of character to all lower case
+a . calls a function on a sting ex) su.upper takes the su sting and converts it to all upper case letters
+_.startswith() <- tests is list starts with a prefix you think ex) s.startswith("abc")
+_.endswith() <- tests if the list ends with a sufix that you think 
+_.split() <- splits the string, takes out the character you tell it to  ex) s= "abc-def" s.split('-') -> s = "abc,def"
+_.join() <- join a list with character you choose ex) splitter.join("-")
+range() <- gives a list of the range of numbers you want. make sure to do ending number +1 ex) range(21) gives 0 to 20
+range(_,_,_) <- gives range of numbers by a set amount ex) range(5,20,4) -> goes from 5 to 19 by 4s
+	range(5,21)	range(5,20,4)
+	range(100,5)	range(100,5,-20)
+list has order
+bag has no order
+set collection with no duplicates 
+set() <-to turn a list into a set ex) set(lst)
+_.union() <- 
+_.intersection() <- takes out the characters that are in both sets. ex) y.intersection(x)
+_.difference() <- gives you everything that is in the set that is not in the other set. ex) y.difference(x) 
+== <- asks if the set is equal to what you ask. ex) x == y 
+_.remove() <- to remove a value from a set 
+del(_[]) <- deletes a value from a list. ex) del(a[2])
+toopal 
+
+functional paradime -> can take in functionns
+	functions which produce other functions 
+	closure -> preconfigured by other functions 
+	use small functions 
+inc is like def
+lambda -> lambda expression. annonomus function that is not tied to any particular variable (x)
+	(lambda x: x + 2)(2) = 4 -> replaces x with 2
+	(lambda x,y: x + y + 3)(2,3) = 8 
+
+map function -> takes 2 imputs. 1. a funstion 2. a list on how the function oppereates
+	nums = range(5, 51, 2)
+	map(lambda x: x + 3, nums) -> increases each num by 3
+	map(inc, nums) -> increases each num by just 1
+	names = ["anna"]
+	map(lambda x: "Hi " + x, names)
+(can be broken accross many computers really easily) 
+
+reduce function ->  combines it all into a single result 
+	reduce(lambda x,y: x + y, range(0,21))
+
+EX) mmax = lambda nums: reduce(lambda x,y: x if x > y else y, nums)
+	mmax([6,2,1,9,3])
+	9
+	(goes through the numbers and picks out the greatest number) 
+
+filter functionn -> takes a funtion then list of elements and returns true or false
+	nums = range(-15,16)
+	filter(lambda x: x > 0) -> goes and picks out the numbers which are true to the statement 0-15
+
+[x for x  in nums if x >0] -> list comprehension
+
+recursive functions:
+	another way to not use loops
+	more powerful than loops
+	breaking it up into a smaller problem each time to make simpler. till reaches base case
+	sumRange(1,5)= 1 + 2 + 3 + 4 + 5 = 15
+		SR(1,4)=1+2+3+4
+			SR(1,3)=1+2+3
+				SR(1,2)=1+2
+					SR(1,1)=1+1 -> base case
+	if the beginning number are the same you dont need computation -> SR(begin,end)= begin if begi= end
+	SR(begin,end)=
+	   begin if begin == end
+	   SR(begin,end-1) + end 
+
+n!=1*2*3*.....n
+3!=1*2*3
+5!=1*2*3*4*5  
+	
+1 1 2 5 8 13 ... 21 34 55
+fib(first, second, n) -> base cases: fib(f,s,1)=f and fid(f,s,2)=s
+
+Big O
+O(n) -> function of n where n is number of inputs or size of inputs
+single for or while loop 
+O(n^2) -> double for loop
+O(n^3) -> triple loop 
+O(n lg n) -> merge sort
+O(1) ->
+when talking about the big O talking about overall run time complexity 
+
+cartesean product:
+	Two sets 
+	A={a,b,c
+	B={d,e,f}
+	A * B = {(a,d), (a,e), (a,f), (b,d), (b,e), (b,f), (c,d), (c,e), (c,f)}
+cart_prod(s1,s2...sn)
+	s1*s2*...*sn
+A= {1,2}
+B= {3,4}
+C= {5,6}
+A*B*C = {(i,j,k) | i E A and (j,k) E B*C}
+recursing to one or zero sets 
+if length of sets is zero then just return an empty set 
+if lenght of sets is one return each element as its own list -> return map(lambda x: [x], sets[0])
+
+all_combs([1,2,3],2) = [(1,2),(1,3),(2,3)]
+
+2 things:
+	1.pair first element with all combinations of length k-1 from set excluding 1st element
+	2. find all combinataions of lenght k on set which excludes current first element -> all_combs(items[1:],k)
+
+Classes and Objects:
+classes give us a way to structure items,4

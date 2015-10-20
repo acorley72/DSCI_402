@@ -1,0 +1,7 @@
+
+
+def my_filter(criteria_f, elements):
+	map(lambda x: print(x) if criteria_f == True else y, elements)
+	
+def my_filter_1(criteria_f, elements):
+	return [x for x in elements if criteria_f(x)]	
