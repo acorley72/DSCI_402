@@ -19,5 +19,4 @@ def word_breaks(word, word_list):
 				list.append(word2)
 	print(list)
 
-print(word_breaks("something",word_list))
 

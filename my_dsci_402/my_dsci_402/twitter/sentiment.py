@@ -39,8 +39,6 @@ def sentiment_score(codes, text, normalize_all_words = True, punct = standard_pu
 	denom = twc
 	if not(normalize_all_words):
 		denom = swc 
-	if denom == 0:
+	if demon == 0:
 		return 0
 	return float(sc) / float(denom)
-
-
